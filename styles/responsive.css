@@ -1,0 +1,46 @@
+@media(pointer:coarse){body{cursor:auto}}
+
+@media(pointer:coarse){#cur{display:none}}
+
+@media(max-width:768px){.nav-links{display:none}}
+
+@media(max-width:768px){
+  .h-orbit-fallback{opacity:.16;transform:translate(20%,4%) scale(.9)}
+  .h-ring-a,.h-ring-b{width:76vw;height:76vw}
+  .h-wire{width:42vw;height:42vw}
+  .h-core{width:70px;height:70px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .h-ring-a,.h-ring-b,.h-wire{animation:none}
+}
+
+@media(max-width:540px){
+  .h-content{width:100%}
+  .h-tag{display:flex;width:100%;gap:.35rem .6rem;line-height:1.6}
+  .h-tag span:nth-child(3){flex-basis:100%;margin-left:calc(28px + .6rem)}
+  .h-tag span:nth-child(3)::before{display:none}
+  .h-sub-detail{display:block}
+  .h-ctas{display:grid;grid-template-columns:1fr;max-width:280px}
+  .h-ctas .btn{justify-content:center;width:100%}
+}
+
+@media(max-width:860px){.stats{grid-template-columns:repeat(3,1fr)}.st:nth-child(3){border-right:none}.st:nth-child(4){border-right:1px solid var(--border)}}
+
+@media(max-width:540px){.stats{grid-template-columns:repeat(2,1fr)}.st:nth-child(2){border-right:none}.st:nth-child(3){border-right:1px solid var(--border)}.st:nth-child(4){border-right:none}}
+
+@media(max-width:900px){.feat-grid{grid-template-columns:1fr;gap:3rem}.browser{transform:none!important}}
+
+@media(max-width:540px){.b-side{display:none}}
+
+@media(max-width:768px){.pg{grid-template-columns:1fr}.exp-row{grid-template-columns:1fr}}
+
+@media(max-width:900px){.gp-grid{grid-template-columns:1fr;gap:3rem}}
+
+@media(max-width:900px){.sk-bento{grid-template-columns:repeat(2,1fr)}.skc.w2{grid-column:span 1}}
+
+@media(max-width:480px){.sk-bento{grid-template-columns:1fr}}
+
+@media(max-width:900px){.ab-grid{grid-template-columns:1fr;gap:2.5rem}.ab-left{position:static;flex-direction:row;gap:1.5rem}.as-ring{width:90px;height:90px;margin-bottom:0}.as-mono-svg{width:50px;height:50px}.as-path{stroke-width:3}.ab-meta{text-align:left;font-size:.62rem}}
+
+@media(max-width:768px){.ct-grid{grid-template-columns:1fr;gap:2.5rem}.cf-row{grid-template-columns:1fr}.ct-right{padding-top:0}}

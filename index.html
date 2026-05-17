@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advik Sharma — Student Builder</title>
+<meta name="description" content="Advik Sharma, 13, Brampton Ontario. Top 1% national AI hackathon. VoteWise India, Good Plate.">
+<meta name="theme-color" content="#06070A">
+<link rel="canonical" href="https://advik-portfolio917.netlify.app/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+
+<!-- SPRING CURSOR -->
+<div id="cur" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 50 54" fill="none">
+    <defs>
+      <filter id="cf" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+        <feOffset dy="1"/>
+        <feComposite in2="SourceAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.23 0 0 0 0 0.51 0 0 0 0 0.96 0 0 0 0.5 0"/>
+        <feBlend in="SourceGraphic" result="shape"/>
+      </filter>
+    </defs>
+    <g filter="url(#cf)">
+      <path d="M42.6817 41.1495L27.5103 6.79925C26.7269 5.02557 24.2082 5.02558 23.3927 6.79925L7.59814 41.1495C6.75833 42.9759 8.52712 44.8902 10.4125 44.1954L24.3757 39.0496C24.8829 38.8627 25.4385 38.8627 25.9422 39.0496L39.8121 44.1954C41.6849 44.8902 43.4884 42.9759 42.6817 41.1495Z" fill="#3B82F6"/>
+      <path d="M43.7146 40.6933L28.5431 6.34306C27.3556 3.65428 23.5772 3.69516 22.3668 6.32755L6.57226 40.6778C5.3134 43.4156 7.97238 46.298 10.803 45.2549L24.7662 40.109C25.0221 40.0147 25.2999 40.0156 25.5494 40.1082L39.4193 45.254C42.2261 46.2953 44.9254 43.4347 43.7146 40.6933Z" stroke="rgba(255,255,255,0.6)" stroke-width="2.3"/>
+    </g>
+  </svg>
+</div>
+
+<!-- SCROLL PROGRESS -->
+<div id="sp"></div>
+
+<!-- PRELOADER -->
+<div id="pre">
+  <div class="pre-logo" id="pre-logo">AS</div>
+  <div class="pre-bar"></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">A<em>S</em></a>
+  <div class="nav-links">
+    <a href="#feat">Work</a>
+    <a href="#gp">Content</a>
+    <a href="#sk">Skills</a>
+    <a href="#ab">About</a>
+    <a href="#ct">Contact</a>
+  </div>
+  <div class="nav-icons">
+    <a href="https://github.com/AdvikSharma917" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/advik-sharma-22a597406/?skipRedirect=true" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section id="hero">
+  <canvas id="c3d" aria-hidden="true"></canvas>
+  <div class="h-orbit-fallback" aria-hidden="true">
+    <span class="h-ring-a"></span>
+    <span class="h-ring-b"></span>
+    <span class="h-wire"></span>
+    <span class="h-core"></span>
+  </div>
+  <div class="h-vignette"></div>
+  <div class="h-content">
+    <div class="h-tag"><span>Age 13</span><span>Brampton, Ontario</span><span>Student Builder</span></div>
+    <h1 class="hero-name" aria-label="Advik Sharma.">
+      <span class="line"><span class="word" data-text="Advik">Advik</span></span>
+      <span class="line"><span class="word" data-text="Sharma">Sharma</span><span class="accent-dot">.</span></span>
+    </h1>
+    <p class="h-sub">Two months into code.<br><strong>Top 1% of a national AI hackathon</strong><span class="h-sub-detail"> — 17,917 submissions.</span></p>
+    <div class="h-ctas">
+      <a href="https://votewise-india-api-366445017721.us-central1.run.app/#home" target="_blank" rel="noopener" class="btn btn-p">
+        View VoteWise
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <a href="#ct" class="btn btn-g">Get in touch</a>
+    </div>
+  </div>
+  <div class="h-scroll">Scroll <span class="h-scroll-line"></span></div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="st"><span class="st-n" id="cn-rank">#155</span><span class="st-l">Hackathon Rank</span></div>
+  <div class="st"><span class="st-n" id="cn-subs">17,917</span><span class="st-l">Submissions</span></div>
+  <div class="st"><span class="st-n">Top 1%</span><span class="st-l">Placement</span></div>
+  <div class="st"><span class="st-n" id="cn-score">96.63%</span><span class="st-l">AI Eval Score</span></div>
+  <div class="st"><span class="st-n">3–4 hrs</span><span class="st-l">Build Time</span></div>
+</div>
+<div class="divider"></div>
+
+<!-- FEATURED -->
+<section id="feat">
+  <div class="orb orb-feat"></div>
+  <div class="s-label rv">Featured Project</div>
+  <div class="feat-grid">
+    <div>
+      <div class="f-badge rv">PromptWars Build with AI 2026</div>
+      <h2 class="f-title rv">VoteWise India</h2>
+      <p class="f-rank rv">#155 of 17,917 — top 1% · 96.63% AI eval</p>
+      <p class="f-desc rv">A non-partisan civic education web app for the Indian election process. Eight sections: learning modules, EVM/VVPAT voting simulator, Gemini-powered AI Guide, glossary, quiz with printable certificate, Teacher Mode, and accessibility settings. Conceived, designed, and shipped in 3–4 hours during month two of learning to code.</p>
+      <div class="tags rv">
+        <span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Gemini API</span><span class="tag">Cloud Run</span><span class="tag">HTML/CSS</span><span class="tag">Secret Manager</span>
+      </div>
+      <div class="f-links rv">
+        <a href="https://votewise-india-api-366445017721.us-central1.run.app/#home" target="_blank" rel="noopener" class="btn btn-p btn-sm">Live App <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+        <a href="https://github.com/AdvikSharma917/votewise-india" target="_blank" rel="noopener" class="btn btn-g btn-sm">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+    <div class="b-wrap rvs">
+      <div class="b-glow"></div>
+      <div class="browser">
+        <div class="b-bar">
+          <div class="b-dots"><div class="bd bdr"></div><div class="bd bdy"></div><div class="bd bdg"></div></div>
+          <div class="b-addr">votewise-india-api-366445017721.us-central1.run.app</div>
+        </div>
+        <div class="b-body">
+          <nav class="b-side">
+            <div class="bsl">Vote<em>Wise</em></div>
+            <div class="bsi on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Home</div>
+            <div class="bsi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Learn</div>
+            <div class="bsi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>Vote Sim</div>
+            <div class="bsi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>AI Guide</div>
+            <div class="bsi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Glossary</div>
+            <div class="bsi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m0 4h.01"/></svg>Quiz</div>
+            <div class="bsi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Teacher</div>
+            <div class="bsi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>Settings</div>
+          </nav>
+          <div class="b-main">
+            <div class="bmt">EVM / VVPAT Simulator</div>
+            <div class="evm">
+              <div class="evm-h">Electronic Voting Machine</div>
+              <div class="evm-s">
+                <div class="evm-r">ELECTION COMMISSION OF INDIA</div>
+                <div class="evm-r">Constituency: Demo — 2024</div>
+                <div class="evm-r a">► Candidate A — INC</div>
+                <div class="evm-r">  Candidate B — BJP</div>
+                <div class="evm-r">  Candidate C — AAP</div>
+              </div>
+              <div class="evm-btns"><div class="evm-btn bl">SELECT</div><div class="evm-btn gr">VOTE</div></div>
+            </div>
+            <div class="ai-b">
+              <div class="ai-b-l">AI Election Guide · Gemini</div>
+              <div class="ai-b-t">"EVM stands for Electronic Voting Machine. India switched to EVMs in 1999 to ensure faster, tamper-resistant elections..."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="proj">
+  <div class="orb orb-proj"></div>
+  <div class="proj-hd">
+    <div><div class="s-label rv">All Projects</div><h2 class="s-title rv">What I've Built</h2></div>
+    <a href="https://github.com/AdvikSharma917" target="_blank" rel="noopener" class="btn btn-g btn-proj-github rv">View GitHub →</a>
+  </div>
+  <div class="pg">
+    <div class="pc rv" data-tilt data-tilt-max="7" data-tilt-speed="450" data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.1">
+      <div class="pc-top">
+        <span class="pc-n">01</span>
+        <div class="pc-ls">
+          <a href="https://votewise-india-api-366445017721.us-central1.run.app/#home" target="_blank" rel="noopener" class="pcl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>Live</a>
+          <a href="https://github.com/AdvikSharma917/votewise-india" target="_blank" rel="noopener" class="pcl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>GitHub</a>
+        </div>
+      </div>
+      <h3 class="pc-t">VoteWise India</h3>
+      <div class="badge badge-live">Deployed · Live</div>
+      <p class="pc-d">Non-partisan civic education app. Eight sections: learning modules, EVM/VVPAT simulator, Gemini-powered AI Guide, glossary, quiz with certificate, Teacher Mode, accessibility settings. #155 of 17,917 — top 1% PromptWars 2026.</p>
+      <div class="tags"><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Gemini API</span><span class="tag">Cloud Run</span><span class="tag">HTML/CSS</span></div>
+    </div>
+    <div class="pc rv" data-tilt data-tilt-max="7" data-tilt-speed="450" data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.1">
+      <div class="pc-top">
+        <span class="pc-n">02</span>
+        <div class="pc-ls">
+          <a href="https://github.com/AdvikSharma917/Book-Reviews-Website" target="_blank" rel="noopener" class="pcl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>GitHub</a>
+        </div>
+      </div>
+      <h3 class="pc-t">Book Reviews Website</h3>
+      <div class="badge badge-done">Complete</div>
+      <p class="pc-d">Multi-page site for browsing and submitting book reviews. Built to understand how backends work — request handling, data flow, authentication. My first real picture of how frontend and backend connect.</p>
+      <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Auth</span></div>
+    </div>
+  </div>
+  <div class="s-label s-label-experiments rv">Early Experiments</div>
+  <div class="exp-row">
+    <div class="ec rv">
+      <div class="ec-ey">Month One · Browser Game</div>
+      <h3 class="ec-t">First-Person Shooting Game</h3>
+      <p class="ec-d">Self-initiated FPS experiment to figure out how game logic works — player state, real-time input, rendering loops. Built before I was "ready."</p>
+      <div class="ec-ls">
+        <a href="https://iron-pulseio.netlify.app/" target="_blank" rel="noopener" class="pcl"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>Live</a>
+        <a href="https://github.com/AdvikSharma917/First-Person-Shooting-Game" target="_blank" rel="noopener" class="pcl"><svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>GitHub</a>
+      </div>
+    </div>
+    <div class="ec rv">
+      <div class="ec-ey">First Proper Project · Python</div>
+      <h3 class="ec-t">Treasure Hunt Game</h3>
+      <p class="ec-d">Text-based Python game with three branching decision points. Built to understand conditional logic and how a program moves from one state to the next.</p>
+      <div class="ec-ls">
+        <a href="https://github.com/AdvikSharma917/Treasure-Hunt-Game" target="_blank" rel="noopener" class="pcl"><svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- GOOD PLATE -->
+<section id="gp">
+  <div class="orb orb-gp"></div>
+  <div class="gp-grid">
+    <div>
+      <div class="s-label rv">Content Channel</div>
+      <div class="gp-tags rv"><span class="gp-tag">Est. Nov 2025</span><span class="gp-tag on">Active · Growing</span><span class="gp-tag">Formerly Desi AI Foodie</span></div>
+      <h2 class="gp-t rv">Good Plate</h2>
+      <p class="gp-d rv">An AI food content channel I created and run entirely on my own. Started when AI video tools were just beginning to get serious — as an experiment. Turned into a channel with over 100 subscribers, published consistently without a team, a budget, or paid promotion. Posted every other day, balanced around school and coding.</p>
+      <div class="gp-stat rv"><span class="gp-sn" id="cn-gp">100+</span><div class="gp-si"><span class="gp-sl">Subscribers</span><span class="gp-ss">YouTube + Instagram · No paid promotion</span></div></div>
+      <div class="gp-links rv">
+        <a href="https://www.youtube.com/@DesiAIFoodie" target="_blank" rel="noopener" class="gp-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a>
+        <a href="https://www.instagram.com/desi_ai_foodie/?hl=en" target="_blank" rel="noopener" class="gp-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
+      </div>
+    </div>
+    <div class="wf rv">
+      <div class="wf-label">My Workflow</div>
+      <div class="wf-step"><div class="wf-n">01</div><div class="wf-b"><div class="wf-t">Concept &amp; Prompts — ChatGPT</div><div class="wf-d">Food concept development, script direction, visual prompt engineering for the video generation phase</div></div></div>
+      <div class="wf-step"><div class="wf-n">02</div><div class="wf-b"><div class="wf-t">Video Generation — Kling</div><div class="wf-d">AI video generation from prompts. Non-veg content — chicken, fish, seafood — consistently performs best</div></div></div>
+      <div class="wf-step"><div class="wf-n">03</div><div class="wf-b"><div class="wf-t">Editing — CapCut</div><div class="wf-d">Cuts, pacing, captions, music. Optimised for short-form format on both platforms</div></div></div>
+      <div class="wf-step"><div class="wf-n">04</div><div class="wf-b"><div class="wf-t">Publish — YouTube + Instagram</div><div class="wf-d">Every other day, simultaneously to both platforms. Balanced around school and coding work</div></div></div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="sk">
+  <div class="s-label rv">Toolkit</div>
+  <h2 class="s-title rv">Skills &amp; Tools</h2>
+  <div class="sk-bento">
+    <div class="skc w2 rv"><div class="sk-lbl">Programming</div><div class="sk-t">Languages</div><div class="sk-tags"><span class="sk-tag">Python</span><span class="sk-tag">JavaScript</span><span class="sk-tag">Node.js</span><span class="sk-tag">HTML5</span><span class="sk-tag">CSS3</span></div></div>
+    <div class="skc rv"><div class="sk-lbl">Timeline</div><div class="sk-big" id="cn-mo">2</div><div class="sk-bsub">months coding</div></div>
+    <div class="skc rv"><div class="sk-lbl">Output</div><div class="sk-big">4+</div><div class="sk-bsub">projects shipped</div></div>
+    <div class="skc w2 rv"><div class="sk-lbl">Dev Tools</div><div class="sk-t">Platforms &amp; Editors</div><div class="sk-tags"><span class="sk-tag">VS Code</span><span class="sk-tag">PyCharm</span><span class="sk-tag">GitHub</span><span class="sk-tag">Netlify</span><span class="sk-tag">Google Cloud Run</span><span class="sk-tag">Secret Manager</span></div></div>
+    <div class="skc w2 rv"><div class="sk-lbl">AI Stack</div><div class="sk-t">AI Tools</div><div class="sk-tags"><span class="sk-tag">ChatGPT</span><span class="sk-tag">Claude</span><span class="sk-tag">Gemini API</span><span class="sk-tag">Kling</span><span class="sk-tag">CapCut</span></div></div>
+    <div class="skc w2 rv"><div class="sk-lbl">Approach</div><div class="sk-t">How I Build</div><ul class="sk-ap"><li>Prompt engineering and iteration</li><li>Debugging and testing real applications</li><li>Deployment to production environments</li><li>Learning by building real things, not exercises</li></ul></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="ab">
+  <div class="orb orb-about"></div>
+  <div class="s-label rv">About</div>
+  <div class="ab-grid">
+    <div class="ab-left rv">
+      <div class="as-ring">
+        <svg class="as-mono-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path class="as-path" d="M 20 78 L 38 22 L 56 78 M 27 58 L 49 58"/>
+          <path class="as-path" d="M 76 36 C 76 28 70 24 60 24 C 50 24 44 29 44 38 C 44 47 50 51 60 55 C 70 59 78 63 78 73 C 78 81 72 84 61 84 C 50 84 44 79 44 72"/>
+        </svg>
+      </div>
+      <div class="ab-meta">Advik Sharma<br>Age 13 · Grade 9 (incoming)<br>Brampton, Ontario<br>2025–2026</div>
+    </div>
+    <div class="ab-copy">
+      <p class="rv">My name is Advik Sharma. I am 13 years old and an incoming Grade 9 student from Brampton, Ontario. I am interested in coding, AI, and building things that actually work. I got into technology because I wanted to understand how things are made — not just use them.</p>
+      <p class="rv">I started learning to code about two months ago under the guidance of my mentor, who is one of the clearest teachers I have worked with. In that short time I have gone from the basics of Python to building and deploying a full web application that placed in the <strong>top 1% of a national AI hackathon</strong> with nearly 18,000 submissions.</p>
+      <p class="rv">That jump happened because I did not just follow lessons — I built things in between them. I also run an AI food content channel that started in late 2025 as an experiment with early AI video tools, and has grown to <strong>over 100 subscribers</strong> through consistent work.</p>
+      <p class="rv">None of what is in this portfolio was assigned. It was all built on my own time because I wanted to.</p>
+      <div class="goals rv">
+        <div class="goal"><span class="goal-k">Short Term</span><span class="goal-v">Build a stronger foundation in Python, logic, and web development through real projects — not exercises. Every project should work and be published.</span></div>
+        <div class="goal"><span class="goal-k">Content</span><span class="goal-v">Keep Good Plate growing through sharper content and better prompts. The foundation is there. The work now is on quality and scale.</span></div>
+        <div class="goal"><span class="goal-k">Long Term</span><span class="goal-v">Seriously interested in medicine, entrepreneurship, and technology. At 13, I don't need to pick one. The skills I'm building connect to all three.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="ct">
+  <div class="orb orb-contact"></div>
+  <div class="s-label rv">Contact</div>
+  <div class="ct-grid">
+    <div>
+      <h2 class="ct-h rv">Let's talk.</h2>
+      <p class="ct-s rv">An opportunity, a collaboration, a question — I'm reachable. Fill out the form or find me on any platform below.</p>
+      <form class="cf rv" id="cform" novalidate>
+        <div class="cf-row">
+          <div class="fg"><label for="fn">Name</label><input type="text" id="fn" name="name" placeholder="Your name" required autocomplete="name"></div>
+          <div class="fg"><label for="fe">Email</label><input type="email" id="fe" name="email" placeholder="your@email.com" required autocomplete="email"></div>
+        </div>
+        <div class="fg"><label for="fm">Message</label><textarea id="fm" name="message" rows="5" placeholder="What's on your mind?" required></textarea></div>
+        <button type="submit" class="btn btn-p btn-submit">Send Message →</button>
+      </form>
+    </div>
+    <div class="ct-right">
+      <div class="soc-hd rv">Find me on</div>
+      <div class="soc-rail">
+        <a href="https://github.com/AdvikSharma917" target="_blank" rel="noopener" class="soc rv" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg><div class="soc-info"><span class="soc-name">GitHub</span><span class="soc-handle">@AdvikSharma917</span></div><span class="soc-arr">→</span></a>
+        <a href="https://www.linkedin.com/in/advik-sharma-22a597406/?skipRedirect=true" target="_blank" rel="noopener" class="soc rv" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><div class="soc-info"><span class="soc-name">LinkedIn</span><span class="soc-handle">advik-sharma-22a597406</span></div><span class="soc-arr">→</span></a>
+        <a href="https://www.youtube.com/@DesiAIFoodie" target="_blank" rel="noopener" class="soc rv" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><div class="soc-info"><span class="soc-name">YouTube</span><span class="soc-handle">@DesiAIFoodie</span></div><span class="soc-arr">→</span></a>
+        <a href="https://www.instagram.com/desi_ai_foodie/?hl=en" target="_blank" rel="noopener" class="soc rv" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg><div class="soc-info"><span class="soc-name">Instagram</span><span class="soc-handle">@desi_ai_foodie</span></div><span class="soc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="ft-l"><strong>Advik Sharma</strong> · Age 13 · Brampton, Ontario · 2025–2026</div>
+  <div class="ft-r"><a href="https://github.com/AdvikSharma917" target="_blank" rel="noopener">github.com/AdvikSharma917</a><span>·</span><span>Built with intent.</span></div>
+</footer>
+
+<script src="scripts/main.js" defer></script>
+<script src="scripts/animations.js" defer></script>
+</body>
+</html>

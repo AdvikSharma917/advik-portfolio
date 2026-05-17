@@ -1,0 +1,16 @@
+{
+  "name": "Advik Sharma Portfolio",
+  "short_name": "Advik",
+  "description": "Student builder portfolio focused on coding, AI, and content creation",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#06070A",
+  "background_color": "#06070A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
