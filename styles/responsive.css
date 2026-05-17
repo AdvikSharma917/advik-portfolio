@@ -33,7 +33,7 @@
 
 @media(max-width:540px){.b-side{display:none}}
 
-@media(max-width:768px){.pg{grid-template-columns:1fr}.exp-row{grid-template-columns:1fr}}
+@media(max-width:768px){.pg{grid-template-columns:1fr}.pc-featured{grid-column:span 1}.exp-row{grid-template-columns:1fr}}
 
 @media(max-width:900px){.gp-grid{grid-template-columns:1fr;gap:3rem}}
 

@@ -257,7 +257,7 @@ else {
 /* ────────────────────────────────────────────────
    VANILLA TILT  (desktop only)
 ──────────────────────────────────────────────── */
-if (!MOBILE && typeof VanillaTilt !== 'undefined') {
+if (!MOBILE && !TOUCH && !RM && typeof VanillaTilt !== 'undefined') {
   VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
     max:7, speed:450, perspective:900, glare:true, 'max-glare':0.1, scale:1.02
   });
