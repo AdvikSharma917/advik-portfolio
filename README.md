@@ -79,7 +79,7 @@ The `netlify.toml`, `_headers`, and `_redirects` files keep deployment behavior 
 
 - GitHub: https://github.com/AdvikSharma917
 - LinkedIn: https://www.linkedin.com/in/advik-sharma-22a597406/?skipRedirect=true
-- Good Plate YouTube: https://www.youtube.com/@DesiAIFoodie
+- Good Plate YouTube: https://www.youtube.com/channel/UCVsSFyCElZjSWhv_ca3_zXA
 - Good Plate Instagram: https://www.instagram.com/desi_ai_foodie/?hl=en
 
 ## Ownership
