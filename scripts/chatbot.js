@@ -77,13 +77,15 @@ form.addEventListener('submit', async event => {
     });
 
     const data = await response.json().catch(() => ({}));
-    if (!response.ok) throw new Error(data.reply || data.error || 'Chat request failed');
+    if (!response.ok) {
+      throw new Error(data.reply || data.error || ERROR_MESSAGE);
+    }
 
     thinking.remove();
     appendMessage(data.reply || ERROR_MESSAGE, 'bot');
   } catch (error) {
     thinking.remove();
-    appendMessage(ERROR_MESSAGE, 'bot error');
+    appendMessage(error.message || ERROR_MESSAGE, 'bot error');
   } finally {
     setLoading(false);
     input.focus();

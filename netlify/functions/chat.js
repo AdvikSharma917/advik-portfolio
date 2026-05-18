@@ -112,6 +112,13 @@ exports.handler = async function handler(event) {
       });
     }
 
+    if (/Could not load the default credentials|GOOGLE_APPLICATION_CREDENTIALS|Application Default Credentials/i.test(error.message || '')) {
+      return json(500, {
+        error: 'MISSING_DIALOGFLOW_CREDENTIALS',
+        reply: 'Netlify is missing Dialogflow credentials. Add DIALOGFLOW_CREDENTIALS_JSON with the full service account JSON, then redeploy the site.'
+      });
+    }
+
     return json(500, {
       error: 'DIALOGFLOW_REQUEST_FAILED',
       reply: 'Dialogflow could not be reached right now.'
