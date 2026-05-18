@@ -44,3 +44,16 @@
 @media(max-width:900px){.ab-grid{grid-template-columns:1fr;gap:2.5rem}.ab-left{position:static;flex-direction:row;gap:1.5rem}.as-ring{width:90px;height:90px;margin-bottom:0}.as-mono-svg{width:50px;height:50px}.as-path{stroke-width:3}.ab-meta{text-align:left;font-size:.62rem}}
 
 @media(max-width:768px){.ct-grid{grid-template-columns:1fr;gap:2.5rem}.cf-row{grid-template-columns:1fr}.ct-right{padding-top:0}}
+
+@media(max-width:540px){
+  .chat-widget{right:.75rem;bottom:.75rem}
+  .chat-panel{width:calc(100vw - 1.5rem);height:min(520px,calc(100vh - 6.5rem))}
+  .chat-toggle span:last-child{display:none}
+  .chat-toggle{width:48px;height:48px;padding:0;justify-content:center}
+  .chat-pulse{position:absolute;top:8px;right:8px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .chat-panel,.chat-toggle,.chat-close,.chat-send{transition:none}
+  .chat-pulse{animation:none}
+}

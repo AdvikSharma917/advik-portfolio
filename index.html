@@ -357,7 +357,35 @@
   <div class="ft-r"><a href="https://github.com/AdvikSharma917" target="_blank" rel="noopener">github.com/AdvikSharma917</a><span>·</span><span>Built with intent.</span></div>
 </footer>
 
+<aside class="chat-widget" data-chat-widget aria-label="Ask Advik's AI Twin">
+  <div class="chat-panel" id="chat-panel" data-chat-panel aria-hidden="true">
+    <div class="chat-head">
+      <div>
+        <p class="chat-kicker">Digital Twin</p>
+        <h2>Ask Advik's AI Twin</h2>
+      </div>
+      <button class="chat-close" type="button" data-chat-close aria-label="Close chat">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="chat-messages" data-chat-messages aria-live="polite"></div>
+    <form class="chat-form" data-chat-form>
+      <label class="sr-only" for="chat-input">Message Advik's AI Twin</label>
+      <input id="chat-input" data-chat-input type="text" autocomplete="off" placeholder="Ask about Advik..." maxlength="500">
+      <button class="chat-send" type="submit" data-chat-send aria-label="Send message">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+      </button>
+    </form>
+  </div>
+  <button class="chat-toggle" type="button" data-chat-toggle aria-expanded="false" aria-controls="chat-panel">
+    <span class="chat-pulse" aria-hidden="true"></span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/></svg>
+    <span>Ask AI</span>
+  </button>
+</aside>
+
 <script src="scripts/main.js" defer></script>
 <script src="scripts/animations.js" defer></script>
+<script src="scripts/chatbot.js" defer></script>
 </body>
 </html>

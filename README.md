@@ -15,6 +15,8 @@ Live site: https://advik-portfolio917.netlify.app/
 - Plain HTML
 - CSS
 - Vanilla JavaScript
+- Netlify Functions
+- Dialogflow ES
 - Three.js
 - GSAP and ScrollTrigger
 - Lenis
@@ -65,6 +67,65 @@ Then visit:
 http://localhost:8080
 ```
 
+## Dialogflow Chatbot
+
+The portfolio includes a secure Netlify Function at:
+
+```text
+/.netlify/functions/chat
+```
+
+The browser chat bubble sends messages to that backend endpoint. The service account JSON key is never loaded by frontend HTML, CSS, or JavaScript.
+
+For local Dialogflow testing:
+
+1. Put the Google service account JSON key at:
+
+```text
+server/dialogflow-key.json
+```
+
+2. Add a local `.env` file:
+
+```bash
+GOOGLE_APPLICATION_CREDENTIALS=./server/dialogflow-key.json
+DIALOGFLOW_PROJECT_ID=advik-digital-twin
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Run the Netlify local server:
+
+```bash
+npm run dev
+```
+
+5. Open the local URL Netlify prints and test the chat bubble.
+
+The Dialogflow agent/intents are in the old Google Cloud project:
+
+```text
+advik-digital-twin
+```
+
+The service account key can come from the newer project:
+
+```text
+advik-digital-twin-api
+```
+
+If detectIntent returns a permission error, grant this service account Dialogflow API Client access in the old `advik-digital-twin` project under IAM:
+
+```text
+dialogflow-portfolio-bot@advik-digital-twin-api.iam.gserviceaccount.com
+```
+
+The local key path, `.env`, and private key files are ignored by Git.
+
 ## Deploy on Netlify
 
 This site is configured for Netlify as a static project:
@@ -74,6 +135,25 @@ This site is configured for Netlify as a static project:
 - Main entry file: `index.html`
 
 The `netlify.toml`, `_headers`, and `_redirects` files keep deployment behavior explicit.
+
+For production chatbot credentials:
+
+1. Go to Netlify site settings.
+2. Open Environment Variables.
+3. Add:
+
+```text
+DIALOGFLOW_CREDENTIALS_JSON
+```
+
+4. Paste the full service account JSON key contents as the value.
+5. Redeploy the site.
+
+Netlify should also have:
+
+```text
+DIALOGFLOW_PROJECT_ID=advik-digital-twin
+```
 
 ## Links
 

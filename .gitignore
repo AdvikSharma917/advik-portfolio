@@ -8,6 +8,9 @@ build/
 # Environment files
 .env
 .env.local
+server/dialogflow-key.json
+dialogflow-key.json
+*.pem
 
 # Local OS files
 .DS_Store
@@ -21,6 +24,7 @@ pnpm-debug.log*
 
 # Netlify local state
 .netlify/
+deno.lock
 
 # Editor folders
 .vscode/

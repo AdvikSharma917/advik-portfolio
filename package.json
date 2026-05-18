@@ -1,0 +1,15 @@
+{
+  "name": "advik-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Advik Sharma portfolio website with Netlify Dialogflow chatbot function.",
+  "scripts": {
+    "dev": "npx --yes netlify-cli dev",
+    "start": "npx --yes netlify-cli dev"
+  },
+  "dependencies": {
+    "@google-cloud/dialogflow": "^6.7.0",
+    "dotenv": "^16.4.7",
+    "uuid": "^9.0.1"
+  }
+}
